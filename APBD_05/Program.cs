@@ -133,7 +133,6 @@ app.MapPut("/api/clients/{id}/trips/{tripId}", (int id, int tripId) =>
         countClientsTrips = readerClientsTrips.GetInt32(0);
     }
 
-    Console.WriteLine(countClientsTrips);
     if(countClientsTrips >= trip.MaxPeople)
         return Results.Conflict("There are too many people in this trip");
 
